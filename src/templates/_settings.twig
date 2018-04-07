@@ -1,0 +1,67 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Validit plugin for Craft CMS
+ *
+ * ValiditField Field Settings
+ *
+ * @author    Fruit Studios
+ * @copyright Copyright (c) 2018 Fruit Studios
+ * @link      https://fruitstudios.co.uk
+ * @package   Validit
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.selectField({
+    label: 'Position'|t('validit'),
+    instructions: 'Where would you like the toggle to be placed.'|t('validit'),
+    id: 'position',
+    name: 'position',
+    value: field.position,
+    options: field.positions,
+    errors: field.getErrors('positions')
+}) }}
+
+{{ forms.lightswitchField({
+    label: 'Toggle Visibility'|t('validit'),
+    instructions: 'Select this if you would like the toggle to show / hide the selected field'|t('validit'),
+    id: 'toggle',
+    name: 'toggle',
+    on: field.toggle,
+    errors: field.getErrors('toggle')
+}) }}
+
+{{ forms.textField({
+    label: 'Toggle Label'|t('validit'),
+    instructions: 'Label for the toggle field'|t('validit'),
+    id: 'label',
+    name: 'label',
+    value: field.label,
+    errors: field.getErrors('label')
+}) }}
+
+{{ forms.selectField({
+    label: 'Field'|t('validit'),
+    instructions: 'What type of field should we toggle?'|t('validit'),
+    id: 'type',
+    name: 'type',
+    value: field.type,
+    options: field.fields,
+    errors: field.getErrors('type')
+}) }}
+
+
+{#
+{% for type in allFieldTypes %}
+    {% set isCurrent = (type == className(field)) %}
+    <div id="{{ type|id }}"{% if not isCurrent %} class="hidden"{% endif %}>
+        {% namespace 'types['~type~']' %}
+            {% set _field = isCurrent ? field : craft.app.fields.createField(type) %}
+            {{ _field.getSettingsHtml()|raw }}
+        {% endnamespace %}
+    </div>
+{% endfor %}
+#}

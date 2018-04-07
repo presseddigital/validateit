@@ -1,0 +1,24 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Validit plugin for Craft CMS 3.x
+ *
+ * ValiditField Field Input
+ *
+ * @author    Fruit Studios
+ * @copyright Copyright (c) 2018 Fruit Studios
+ * @link      https://fruitstudios.co.uk
+ * @package   Validit
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+        label: 'Some Field',
+        instructions: 'Enter some text here.',
+        id: name,
+        name: name,
+        value: value})
+}}

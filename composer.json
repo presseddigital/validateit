@@ -1,0 +1,40 @@
+{
+    "name": "fruitstudios/validit",
+    "description": "A super simple field type which allows you toggle existing field types.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "validit"
+    ],
+    "support": {
+        "docs": "https://github.com/fruitstudios/craft-validit/blob/master/README.md",
+        "issues": "https://github.com/fruitstudios/craft-validit/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fruit Studios",
+            "homepage": "https://fruitstudios.co.uk"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "fruitstudios\\validit\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Validit",
+        "handle": "validit",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/fruitstudios/craft-validit/master/CHANGELOG.md",
+        "class": "fruitstudios\\validit\\Validit"
+    }
+}
