@@ -16,15 +16,50 @@
 {% import "_includes/forms" as forms %}
 
 {{ forms.selectField({
-    label: 'Position'|t('validit'),
-    instructions: 'Where would you like the toggle to be placed.'|t('validit'),
-    id: 'position',
-    name: 'position',
-    value: field.position,
-    options: field.positions,
-    errors: field.getErrors('positions')
+    label: 'Type'|t('validit'),
+    instructions: 'What would you like to validate.'|t('validit'),
+    id: 'type',
+    name: 'type',
+    value: field.type,
+    options: field.types,
+    errors: field.getErrors('type'),
+    toggle: true
 }) }}
 
+<div id="custom" class="{{ field.type != 'custom' ? 'hidden' }}">
+
+    {{ forms.textField({
+        label: 'Regex'|t('validit'),
+        instructions: 'Validate this field with a custom regex rule.'|t('validit'),
+        id: 'regex',
+        name: 'regex',
+        value: field.regex,
+        errors: field.getErrors('regex')
+    }) }}
+
+</div>
+
+{{ forms.textField({
+    label: 'Validation Message'|t('validit'),
+    instructions: 'Override the default validation message displayed on failed validation.'|t('validit'),
+    id: 'message',
+    name: 'message',
+    value: field.message,
+    errors: field.getErrors('message')
+}) }}
+
+{{ forms.textField({
+    label: 'Placeholder'|t('validit'),
+    instructions: 'Override the default input placeholder.'|t('validit'),
+    id: 'placeholder',
+    name: 'placeholder',
+    value: field.placeholder,
+    errors: field.getErrors('placeholder')
+}) }}
+
+
+
+{#
 {{ forms.lightswitchField({
     label: 'Toggle Visibility'|t('validit'),
     instructions: 'Select this if you would like the toggle to show / hide the selected field'|t('validit'),
@@ -52,7 +87,7 @@
     options: field.fields,
     errors: field.getErrors('type')
 }) }}
-
+ #}
 
 {#
 {% for type in allFieldTypes %}
