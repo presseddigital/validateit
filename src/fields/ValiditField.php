@@ -49,10 +49,14 @@ class ValiditField extends Field
     {
         $rules = parent::rules();
         $rules[] = [['type'], 'required'];
-        $rules[] = [['regex'], 'string'];
-        $rules[] = [['message'], 'string'];
-        $rules[] = [['placeholder'], 'string'];
+        $rules[] = [['regex'], 'required', 'when' => [$this, 'isCustomType']];
+        $rules[] = [['message', 'placeholder', 'regex'], 'string'];
         return $rules;
+    }
+
+    public function isCustomType(): bool
+    {
+        return $this->type == 'custom';
     }
 
     public function getElementValidationRules(): array
