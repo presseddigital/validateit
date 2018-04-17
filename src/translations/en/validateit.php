@@ -1,6 +1,6 @@
 <?php
 /**
- * Validit plugin for Craft CMS 3.x
+ * Validateit plugin for Craft CMS 3.x
  *
  * A super simple field type which allows you toggle existing field types.
  *
@@ -10,9 +10,9 @@
 
 /**
  * @author    Fruit Studios
- * @package   Validit
+ * @package   Validateit
  * @since     1.0.0
  */
 return [
-    'Validit plugin loaded' => 'Validit plugin loaded',
+    'Validateit plugin loaded' => 'Validateit plugin loaded',
 ];

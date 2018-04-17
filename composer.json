@@ -1,6 +1,6 @@
 {
-    "name": "fruitstudios/validit",
-    "description": "A super simple field type which allows you toggle existing field types.",
+    "name": "fruitstudios/validateit",
+    "description": "Add validation to you text fields",
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
@@ -8,11 +8,12 @@
         "cms",
         "craftcms",
         "craft-plugin",
-        "validit"
+        "validate",
+        "validateit"
     ],
     "support": {
-        "docs": "https://github.com/fruitstudios/craft-validit/blob/master/README.md",
-        "issues": "https://github.com/fruitstudios/craft-validit/issues"
+        "docs": "https://github.com/fruitstudios/craft-validateit/blob/master/README.md",
+        "issues": "https://github.com/fruitstudios/craft-validateit/issues"
     },
     "license": "MIT",
     "authors": [
@@ -22,19 +23,19 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0"
+        "craftcms/cms": "^3.0.2"
     },
     "autoload": {
         "psr-4": {
-          "fruitstudios\\validit\\": "src/"
+          "fruitstudios\\validateit\\": "src/"
         }
     },
     "extra": {
-        "name": "Validit",
-        "handle": "validit",
+        "name": "Validateit",
+        "handle": "validateit",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/fruitstudios/craft-validit/master/CHANGELOG.md",
-        "class": "fruitstudios\\validit\\Validit"
+        "changelogUrl": "https://raw.githubusercontent.com/fruitstudios/craft-validateit/master/CHANGELOG.md",
+        "class": "fruitstudios\\validateit\\Validateit"
     }
 }

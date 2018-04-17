@@ -1,6 +1,6 @@
 <?php
 /**
- * Validit plugin for Craft CMS 3.x
+ * Validateit plugin for Craft CMS 3.x
  *
  * A super simple field type which allows you toggle existing field types.
  *
@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2018 Fruit Studios
  */
 
-namespace fruitstudios\validit;
+namespace fruitstudios\validateit;
 
-use fruitstudios\validit\fields\ValiditField;
+use fruitstudios\validateit\fields\ValidateitField;
 
 use Craft;
 use craft\base\Plugin;
@@ -20,20 +20,20 @@ use craft\events\RegisterComponentTypesEvent;
 use yii\base\Event;
 
 /**
- * Class Validit
+ * Class Validateit
  *
  * @author    Fruit Studios
- * @package   Validit
+ * @package   Validateit
  * @since     1.0.0
  *
  */
-class Validit extends Plugin
+class Validateit extends Plugin
 {
     // Static Properties
     // =========================================================================
 
     /**
-     * @var Validit
+     * @var Validateit
      */
     public static $plugin;
 
@@ -60,13 +60,13 @@ class Validit extends Plugin
             Fields::class,
             Fields::EVENT_REGISTER_FIELD_TYPES,
             function (RegisterComponentTypesEvent $event) {
-                $event->types[] = ValiditField::class;
+                $event->types[] = ValidateitField::class;
             }
         );
 
         Craft::info(
             Craft::t(
-                'validit',
+                'validateit',
                 '{name} plugin loaded',
                 ['name' => $this->name]
             ),
