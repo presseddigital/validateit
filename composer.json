@@ -1,6 +1,6 @@
 {
     "name": "fruitstudios/validateit",
-    "description": "Add validation to you text fields",
+    "description": "Supercharged text field validation.",
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
@@ -15,7 +15,7 @@
         "docs": "https://github.com/fruitstudios/craft-validateit/blob/master/README.md",
         "issues": "https://github.com/fruitstudios/craft-validateit/issues"
     },
-    "license": "MIT",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Fruit Studios",

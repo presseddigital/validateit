@@ -59,11 +59,14 @@ class ValidateitField extends Field
         return $this->type == 'custom';
     }
 
+    public function getTypeArray(): array
+    {
+        return $this->getTypes()[$this->type] ?? null;
+    }
+
     public function getElementValidationRules(): array
     {
-        $message = !empty($this->message) ? $this->message : Craft::t('validateit', 'Please provide a valid {type}', [
-            'type' => $this->type
-        ]);
+        $message = !empty($this->message) ? $this->message : ( $this->getTypeArray()['error'] ?? null );
 
         switch($this->type)
         {
@@ -165,59 +168,94 @@ class ValidateitField extends Field
     public function getTypes()
     {
 
+
+
         return [
             'email' => [
                 'label' => Craft::t('validateit', 'Email Address'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'email address')
+                ]),
                 'placeholder' => Craft::t('validateit', 'email@domain.com'),
                 'handle' => 'email',
             ],
             'url' => [
                 'label' => Craft::t('validateit', 'URL'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'link')
+                ]),
                 'placeholder' => Craft::t('validateit', 'https://domain.com'),
                 'handle' => 'url',
             ],
-            'telephone' => [
-                'label' => Craft::t('validateit', 'Telephone'),
+            'phone' => [
+                'label' => Craft::t('validateit', 'Phone Number'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'phone number')
+                ]),
                 'placeholder' => Craft::t('validateit', '+44(0)0000 000000'),
-                'handle' => 'telephone',
+                'handle' => 'phone',
             ],
             'ip' => [
-                'label' => Craft::t('validateit', 'IP Address (Any)'),
+                'label' => Craft::t('validateit', 'IP Address'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'IP address')
+                ]),
                 'placeholder' => Craft::t('validateit', '192.168.0.1, 2001:0db8:85a3:0000:0000:8a2e:0370:7334'),
                 'handle' => 'ip',
             ],
             'ipv4' => [
-                'label' => Craft::t('validateit', 'IP Address (IPV4)'),
+                'label' => Craft::t('validateit', 'IP Address (IPv4)'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'IPv4 address')
+                ]),
                 'placeholder' => Craft::t('validateit', '192.168.0.1'),
                 'handle' => 'ipv4',
             ],
             'ipv6' => [
-                'label' => Craft::t('validateit', 'IP Address (IPV6)'),
+                'label' => Craft::t('validateit', 'IP Address (V6)'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'IPv6 address')
+                ]),
                 'placeholder' => Craft::t('validateit', '2001:0db8:85a3:0000:0000:8a2e:0370:7334'),
                 'handle' => 'ipv6',
             ],
             'facebook' => [
                 'label' => Craft::t('validateit', 'Facebook Url'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'Facebook link')
+                ]),
                 'placeholder' => Craft::t('validateit', 'https://www.facebook.com/username'),
                 'handle' => 'facebook',
             ],
             'twitter' => [
                 'label' => Craft::t('validateit', 'Twitter Url'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'Twitter link')
+                ]),
                 'placeholder' => Craft::t('validateit', 'https://twitter.com/username'),
                 'handle' => 'twitter',
             ],
             'instagram' => [
                 'label' => Craft::t('validateit', 'Instagram Url'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'Instagram link')
+                ]),
                 'placeholder' => Craft::t('validateit', 'https://www.instagram.com/username'),
                 'handle' => 'instagram',
             ],
             'linkedin' => [
                 'label' => Craft::t('validateit', 'LinkedIn Url'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'LinkedIn link')
+                ]),
                 'placeholder' => Craft::t('validateit', 'https://www.linkedin.com/in/username'),
                 'handle' => 'linkedin',
             ],
             'custom' => [
                 'label' => Craft::t('validateit', 'Custom Regex'),
+                'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
+                    'type' => Craft::t('validateit', 'value')
+                ]),
                 'placeholder' => Craft::t('validateit', $this->name),
                 'handle' => 'custom',
             ]
