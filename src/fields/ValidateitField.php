@@ -167,9 +167,6 @@ class ValidateitField extends Field
 
     public function getTypes()
     {
-
-
-
         return [
             'email' => [
                 'label' => Craft::t('validateit', 'Email Address'),

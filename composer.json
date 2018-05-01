@@ -2,7 +2,7 @@
     "name": "fruitstudios/validateit",
     "description": "Supercharged text field validation.",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
         "craft",
         "cms",
