@@ -11,13 +11,15 @@
 namespace fruitstudios\validateit\fields;
 
 use fruitstudios\validateit\Validateit;
+use fruitstudios\validateit\validators\UrlValidator as ValidateitUrlValidator;
 
 use Craft;
 use craft\base\ElementInterface;
 use craft\base\Field;
 use craft\helpers\Db;
-use yii\db\Schema;
 use craft\helpers\Json;
+
+use yii\db\Schema;
 
 /**
  * @author    Fruit Studios
