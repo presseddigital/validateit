@@ -78,7 +78,7 @@ class ValidateitField extends Field
             case('url'):
                 $rule = [ValidateitUrlValidator::class, 'defaultScheme' => 'http', 'message' => $message];
                 break;
-            case('tel'):
+            case('phone'):
                 $match = '/^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$/';
                 $rule = ['match', 'pattern' => $match, 'message' => $message];
                 break;
@@ -211,7 +211,7 @@ class ValidateitField extends Field
                 'handle' => 'ipv4',
             ],
             'ipv6' => [
-                'label' => Craft::t('validateit', 'IP Address (V6)'),
+                'label' => Craft::t('validateit', 'IP Address (IPv6)'),
                 'error' => Craft::t('validateit', 'Please provide a valid {type}.', [
                     'type' => Craft::t('validateit', 'IPv6 address')
                 ]),
