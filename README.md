@@ -60,4 +60,4 @@ If you have any super useful validation rules shout and we can look to add them 
 
 *   [ ] Show default error message and placeholder text in field settings.
 
-Brought to you by [Fruit Studios](https://fruitstudios.co.uk)
+Brought to you by [Pressed Digital](https://pressed.digital)
