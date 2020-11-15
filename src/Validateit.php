@@ -4,13 +4,13 @@
  *
  * A super simple field type which allows you toggle existing field types.
  *
- * @link      https://fruitstudios.co.uk
- * @copyright Copyright (c) 2018 Fruit Studios
+ * @link      https://pressed.digital
+ * @copyright Copyright (c) 2018 Pressed Digital
  */
 
-namespace fruitstudios\validateit;
+namespace presseddigital\validateit;
 
-use fruitstudios\validateit\fields\ValidateitField;
+use presseddigital\validateit\fields\ValidateitField;
 
 use Craft;
 use craft\base\Plugin;
@@ -22,7 +22,7 @@ use yii\base\Event;
 /**
  * Class Validateit
  *
- * @author    Fruit Studios
+ * @author    Pressed Digital
  * @package   Validateit
  * @since     1.0.0
  *

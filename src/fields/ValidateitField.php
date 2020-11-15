@@ -4,14 +4,14 @@
  *
  * A super simple field type which allows you toggle existing field types.
  *
- * @link      https://fruitstudios.co.uk
- * @copyright Copyright (c) 2018 Fruit Studios
+ * @link      https://pressed.digital
+ * @copyright Copyright (c) 2018 Pressed Digital
  */
 
-namespace fruitstudios\validateit\fields;
+namespace presseddigital\validateit\fields;
 
-use fruitstudios\validateit\Validateit;
-use fruitstudios\validateit\validators\UrlValidator as ValidateitUrlValidator;
+use presseddigital\validateit\Validateit;
+use presseddigital\validateit\validators\UrlValidator as ValidateitUrlValidator;
 
 use Craft;
 use craft\base\ElementInterface;
@@ -22,7 +22,7 @@ use craft\helpers\Json;
 use yii\db\Schema;
 
 /**
- * @author    Fruit Studios
+ * @author    Pressed Digital
  * @package   Validateit
  * @since     1.0.0
  */

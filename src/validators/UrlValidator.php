@@ -1,5 +1,5 @@
 <?php
-namespace fruitstudios\validateit\validators;
+namespace presseddigital\validateit\validators;
 
 use Craft;
 use yii\validators\UrlValidator as YiiUrlValidator;

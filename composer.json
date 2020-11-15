@@ -1,25 +1,21 @@
 {
-    "name": "fruitstudios/validateit",
+    "name": "presseddigital/validateit",
     "description": "Supercharged text field validation.",
     "type": "craft-plugin",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "keywords": [
-        "craft",
-        "cms",
         "craftcms",
-        "craft-plugin",
-        "validate",
-        "validateit"
+        "validation",
     ],
     "support": {
-        "docs": "https://github.com/fruitstudios/craft-validateit/blob/master/README.md",
-        "issues": "https://github.com/fruitstudios/craft-validateit/issues"
+        "docs": "https://github.com/presseddigital/validateit/blob/master/README.md",
+        "issues": "https://github.com/presseddigital/validateit/issues"
     },
     "license": "proprietary",
     "authors": [
         {
-            "name": "Fruit Studios",
-            "homepage": "https://fruitstudios.co.uk"
+            "name": "Pressed Digital",
+            "homepage": "https://pressed.digital"
         }
     ],
     "require": {
@@ -27,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-          "fruitstudios\\validateit\\": "src/"
+          "presseddigital\\validateit\\": "src/"
         }
     },
     "extra": {
@@ -35,7 +31,7 @@
         "handle": "validateit",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/fruitstudios/craft-validateit/master/CHANGELOG.md",
-        "class": "fruitstudios\\validateit\\Validateit"
+        "changelogUrl": "https://raw.githubusercontent.com/presseddigital/validateit/master/CHANGELOG.md",
+        "class": "presseddigital\\validateit\\Validateit"
     }
 }

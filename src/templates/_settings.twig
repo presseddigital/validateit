@@ -5,9 +5,9 @@
  *
  * ValidateitField Field Settings
  *
- * @author    Fruit Studios
- * @copyright Copyright (c) 2018 Fruit Studios
- * @link      https://fruitstudios.co.uk
+ * @author    Pressed Digital
+ * @copyright Copyright (c) 2018 Pressed Digital
+ * @link      https://pressed.digital
  * @package   Validateit
  * @since     1.0.0
  */
@@ -56,47 +56,3 @@
     value: field.placeholder,
     errors: field.getErrors('placeholder')
 }) }}
-
-
-
-{#
-{{ forms.lightswitchField({
-    label: 'Toggle Visibility'|t('validateit'),
-    instructions: 'Select this if you would like the toggle to show / hide the selected field'|t('validateit'),
-    id: 'toggle',
-    name: 'toggle',
-    on: field.toggle,
-    errors: field.getErrors('toggle')
-}) }}
-
-{{ forms.textField({
-    label: 'Toggle Label'|t('validateit'),
-    instructions: 'Label for the toggle field'|t('validateit'),
-    id: 'label',
-    name: 'label',
-    value: field.label,
-    errors: field.getErrors('label')
-}) }}
-
-{{ forms.selectField({
-    label: 'Field'|t('validateit'),
-    instructions: 'What type of field should we toggle?'|t('validateit'),
-    id: 'type',
-    name: 'type',
-    value: field.type,
-    options: field.fields,
-    errors: field.getErrors('type')
-}) }}
- #}
-
-{#
-{% for type in allFieldTypes %}
-    {% set isCurrent = (type == className(field)) %}
-    <div id="{{ type|id }}"{% if not isCurrent %} class="hidden"{% endif %}>
-        {% namespace 'types['~type~']' %}
-            {% set _field = isCurrent ? field : craft.app.fields.createField(type) %}
-            {{ _field.getSettingsHtml()|raw }}
-        {% endnamespace %}
-    </div>
-{% endfor %}
-#}

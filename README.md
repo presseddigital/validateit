@@ -1,8 +1,10 @@
-<p align="left"><a href="https://github.com/fruitstudios/craft-validateit" target="_blank"><img width="100" height="100" src="resources/img/validateit.svg" alt="Validateit"></a></p>
+<p align="left"><a href="https://github.com/presseddigital/validateit" target="_blank"><img width="100" height="100" src="resources/img/validateit.svg" alt="Validateit"></a></p>
 
 # Validateit plugin for Craft 3
 
 Supercharged text field validation...
+
+> :mega: **A note from the new (well sort of new) owners Pressed Digital:** At the end of 2019 Fruit Studios Ltd was sold to allow it's founders to shift 100% of their focus to the, now not so side project, findarace.com. As a part of the deal we retained ownership of all Craft plugins and are committed to make them even more awesome. With findarace.com being all Craft, this aligns really nicely, and as a little silver lining we should now finally have some time to launch some of our unreleased plugins!
 
 ### Requirements
 
@@ -14,7 +16,7 @@ To install the plugin, follow these steps:
 
 1.  Install with Composer via:
 
-    composer require fruitstudios/validateit
+    composer require presseddigital/validateit
 
 2.  In the Control Panel, go to Settings → Plugins and click the “Install” button for Validateit.
 
@@ -60,4 +62,4 @@ If you have any super useful validation rules shout and we can look to add them 
 
 *   [ ] Show default error message and placeholder text in field settings.
 
-Brought to you by [Fruit Studios](https://fruitstudios.co.uk)
+Brought to you by [Pressed Digital](https://pressed.digital)
