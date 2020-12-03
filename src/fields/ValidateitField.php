@@ -275,3 +275,5 @@ class ValidateitField extends Field
     }
 
 }
+
+class_alias(ValidateitField::class, \fruitstudios\validateit\fields\ValidateitField::class);
