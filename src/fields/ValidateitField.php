@@ -16,6 +16,7 @@ use fruitstudios\validateit\validators\UrlValidator as ValidateitUrlValidator;
 use Craft;
 use craft\base\ElementInterface;
 use craft\base\PreviewableFieldInterface;
+use craft\base\SortableFieldInterface;
 use craft\base\Field;
 use craft\helpers\Db;
 use craft\helpers\Json;
@@ -27,7 +28,7 @@ use yii\db\Schema;
  * @package   Validateit
  * @since     1.0.0
  */
-class ValidateitField extends Field implements PreviewableFieldInterface
+class ValidateitField extends Field implements PreviewableFieldInterface, SortableFieldInterface
 {
     // Public Properties
     // =========================================================================
