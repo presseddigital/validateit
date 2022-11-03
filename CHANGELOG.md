@@ -1,5 +1,10 @@
 # Validateit Changelog
 
+## 3.0.0 - 2022-11-03
+
+### Changed
+- Bump version numbers to mirror crafts major versions
+
 ## 1.0.4 - 2020-11-15
 
 ### Changed

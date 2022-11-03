@@ -2,14 +2,14 @@
     "name": "presseddigital/validateit",
     "description": "Supercharged text field validation.",
     "type": "craft-plugin",
-    "version": "1.0.4",
+    "version": "3.0.0",
     "keywords": [
         "craftcms",
         "validation",
         "validate"
     ],
     "support": {
-        "docs": "https://github.com/presseddigital/validateit/blob/master/README.md",
+        "docs": "https://github.com/presseddigital/validateit/blob/v3/README.md",
         "issues": "https://github.com/presseddigital/validateit/issues?state=open"
     },
     "license": "proprietary",
@@ -20,7 +20,8 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.1.0"
+        "craftcms/cms": "^3.1.8",
+        "php": "^7.2.5|^8.0"
     },
     "autoload": {
         "psr-4": {
@@ -33,7 +34,7 @@
         "handle": "validateit",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/presseddigital/validateit/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/presseddigital/validateit/v3/CHANGELOG.md",
         "class": "presseddigital\\validateit\\Validateit"
     }
 }
