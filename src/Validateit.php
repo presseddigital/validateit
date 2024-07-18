@@ -1,6 +1,6 @@
 <?php
 /**
- * Validateit plugin for Craft CMS 3.x
+ * Validateit plugin for Craft CMS 4.x
  *
  * A super simple field type which allows you toggle existing field types.
  *
@@ -43,7 +43,7 @@ class Validateit extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '2.0.0';
 
     // Public Methods
     // =========================================================================

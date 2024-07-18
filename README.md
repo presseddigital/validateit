@@ -1,12 +1,12 @@
 <p align="left"><a href="https://github.com/fruitstudios/craft-validateit" target="_blank"><img width="100" height="100" src="resources/img/validateit.svg" alt="Validateit"></a></p>
 
-# Validateit plugin for Craft 3
+# Validateit plugin for Craft 4
 
 Supercharged text field validation...
 
 ### Requirements
 
-This plugin requires Craft CMS 3.0.0 or later.
+This plugin requires Craft CMS 4.0.0 or later.
 
 ### Installation
 

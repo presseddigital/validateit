@@ -1,6 +1,6 @@
 <?php
 /**
- * Validateit plugin for Craft CMS 3.x
+ * Validateit plugin for Craft CMS 4.x
  *
  * A super simple field type which allows you toggle existing field types.
  *
@@ -47,7 +47,7 @@ class ValidateitField extends Field
     // Public Methods
     // =========================================================================
 
-    public function rules()
+    public function rules(): array
     {
         $rules = parent::rules();
         $rules[] = [['type'], 'required'];
@@ -123,12 +123,12 @@ class ValidateitField extends Field
         return Schema::TYPE_TEXT;
     }
 
-    public function normalizeValue($value, ElementInterface $element = null)
+    public function normalizeValue(mixed $value, ?\craft\base\ElementInterface $element = null): mixed
     {
         return $value;
     }
 
-    public function serializeValue($value, ElementInterface $element = null)
+    public function serializeValue(mixed $value, ?\craft\base\ElementInterface $element = null): mixed
     {
         return parent::serializeValue($value, $element);
     }
@@ -136,7 +136,7 @@ class ValidateitField extends Field
     /**
      * @inheritdoc
      */
-    public function getSettingsHtml()
+    public function getSettingsHtml(): ?string
     {
         // Render the settings template
         return Craft::$app->getView()->renderTemplate(
@@ -150,7 +150,7 @@ class ValidateitField extends Field
     /**
      * @inheritdoc
      */
-    public function getInputHtml($value, ElementInterface $element = null): string
+    public function getInputHtml(mixed $value, ?\craft\base\ElementInterface $element = null): string
     {
         // Get our id and namespace
         $id = Craft::$app->getView()->formatInputId($this->handle);
